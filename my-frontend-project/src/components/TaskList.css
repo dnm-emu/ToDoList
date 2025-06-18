@@ -1,0 +1,76 @@
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 16px;
+  padding: 16px 20px;
+  width: fit-content;
+  font-family: sans-serif;
+  width: 300px;
+}
+
+.grey{
+  background-color: #d9d9d9 !important;
+} 
+.purple{
+  background-color: #c3a2d9 !important;
+}
+
+.green{
+  background-color: #a2d9c3 !important;
+}
+
+.orange{
+  background-color: #f8c8a4 !important;
+}
+
+.yellow{
+  background-color: #f8e7a4 !important;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+.dots-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  color: #555;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  min-width: 120px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
