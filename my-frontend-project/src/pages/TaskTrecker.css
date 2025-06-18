@@ -1,0 +1,37 @@
+.list {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.plus-btn{
+  width: 40px;
+  height: 40px;
+  border-style: solid ;
+  border-color: #a4b9e5; 
+  color: #a4b9e5;
+  border-radius: 100%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.plus-btn:hover {
+  background-color: #92a8d8; 
+  color: white;
+}
+.plus-task-btn{
+    width: 40px;
+    height: 40px;
+    border-style: solid ;
+    border-color: #e5c1a4; 
+    color: #e5c1a4;
+    border-radius: 100%;
+    font-size: 24px;
+    cursor: pointer;
+}
