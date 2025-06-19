@@ -8,6 +8,6 @@ function Button(props) {
         <button className='btn' type="submit">
             {props.value}
         </button>
-)
+    )
 }
 export default Button;

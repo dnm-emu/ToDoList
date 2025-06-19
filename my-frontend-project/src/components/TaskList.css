@@ -49,7 +49,6 @@
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   right: 0;
   background-color: white;
@@ -73,4 +72,18 @@
 
 .dropdown.active .dropdown-menu {
   display: block;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
 }
