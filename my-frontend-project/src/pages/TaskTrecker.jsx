@@ -9,6 +9,7 @@ import ListModal from "../components/ListModal";
 
 function TaskTrecker() {
     const [tasks, setTasks] = useState([]);
+    const [sortTypes, setSortTypes] = useState({});
 
     const [list, setList] = useState([]);
     const [showListModal, setShowListModal] = useState(false);
@@ -123,13 +124,29 @@ function TaskTrecker() {
                 {list.map((elem, i) => (
                     <div className='tasks' key={i}>
                         <TaskList color={elem.color} title={elem.name} id={elem.id} />
+                        <div className="sort-options">
+                            <label>Сортировать по: </label>
+                            <select value={sortTypes[elem.name] || 'time'} onChange={e => setSortTypes(prev => ({ ...prev, [elem.name]: e.target.value }))}>
+                                <option value="time">Времени</option>
+                                <option value="priority">Приоритету</option>
+                            </select>
+                        </div>
                         {console.log(tasks)}
                         {tasks
                             .filter(e => elem.name === "Все задачи" || e.type === elem.name)
+                            .sort((a, b) => {
+                                const currentSort = sortTypes[elem.name] || 'time';
+                                if (currentSort === 'time') {
+                                    return a.time.localeCompare(b.time);
+                                } else if (currentSort === 'priority') {
+                                    return b.priority - a.priority;
+                                }
+                                return 0;
+                            })
                             .map((task, index) => (
                                 <div key={index} onClick={() => setSelectedTask(task)}>
                                     {console.log(list)}
-                                    <Task text={task.text} time={task.time} tasktypes={list} />
+                                    <Task text={task.text} time={task.time} tasktypes={list} status={task.status} priority={task.priority}/>
                                 </div>
                             ))
                         }

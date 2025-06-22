@@ -8,11 +8,15 @@ function ModalTask({ task, onClose, tasktypes, triggerRefresh }) {
     const [type, setType] = useState(task.type || '');
     const [list, setList] = useState(tasktypes)
     const options = tasktypes
+    const [status, setStatus] = useState(task.status ?? false);
+    const [priority, setPriority] = useState(task.priority ?? 1);
 
     useEffect(() => {
         setText(task.text || '');
         setTime(task.time || '');
         setType(task.type || '');
+        setStatus(task.status ?? false);
+        setPriority(task.priority ?? 1);
     }, [task]);
 
     const handleSubmit = async () => {
@@ -29,7 +33,7 @@ function ModalTask({ task, onClose, tasktypes, triggerRefresh }) {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify({ text, time, type }),
+                body: JSON.stringify({ text, time, type, status, priority }),
             });
 
             if (response.ok) {
@@ -89,6 +93,25 @@ function ModalTask({ task, onClose, tasktypes, triggerRefresh }) {
                     />
 
                     
+                </label>
+                <label>
+                    Статус:
+                    <select value={status.toString()} onChange={e => setStatus(e.target.value === 'true')}>
+                      <option value="false">Не выполнено</option>
+                      <option value="true">Выполнено</option>
+                    </select>
+                </label>
+                <label>
+                    Приоритет:
+                    <Select
+                      options={[
+                        { value: 1, label: 'Низкий' },
+                        { value: 2, label: 'Средний' },
+                        { value: 3, label: 'Высокий' }
+                      ]}
+                      value={{ value: priority, label: priority === 1 ? 'Низкий' : priority === 2 ? 'Средний' : 'Высокий' }}
+                      onChange={(selected) => setPriority(selected.value)}
+                    />
                 </label>
                 <div className="modal-actions">
                     {task.id && <button onClick={handleDelete}>Удалить</button>}

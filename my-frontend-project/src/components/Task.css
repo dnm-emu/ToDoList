@@ -10,10 +10,18 @@
   box-shadow: 0 0 0 1px #f0f0f0;
 }
 
-.task-type-indicator {
+.task-type-indicator-true {
   width: 6px;
   height: 40px;
-  background-color: #c19ce4; 
+  background-color: #9ce4a0; 
+  border-radius: 3px;
+  margin-right: 12px;
+}
+
+.task-type-indicator-false {
+  width: 6px;
+  height: 40px;
+  background-color: #e49c9d; 
   border-radius: 3px;
   margin-right: 12px;
 }
@@ -49,10 +57,26 @@
   font-size: 16px;
 }
 
-.task-end-indicator {
+.task-end-indicator-1 {
+  width: 12px;
+  height: 24px;
+  background-color: #befab2;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+
+.task-end-indicator-2 {
   width: 12px;
   height: 24px;
   background-color: #fae9b2;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+
+.task-end-indicator-3 {
+  width: 12px;
+  height: 24px;
+  background-color: #fabcb2;
   border-radius: 2px;
   margin-left: 8px;
 }
