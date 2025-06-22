@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 Запустите сервер:
 uvicorn app.main:app --reload
-Документация API: Откройте http://localhost:8000/docs
+Документация API: Откройте http://localhost:8000
 Запуск через Docker
 docker build -t todo_back .
 docker run -p 8000:8000 todo_app
