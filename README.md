@@ -13,7 +13,7 @@ JWT-токены для авторизации
 
 Быстрый старт
 Клонируйте репозиторий:
-git clone https://github.com/Revmirych/todo_app.git
+git clone https://github.com/dnm-emu/ToDoList
 cd todo_app
 
 Создайте и активируйте виртуальное окружение:
