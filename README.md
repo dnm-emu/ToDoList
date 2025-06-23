@@ -14,11 +14,13 @@ JWT-токены для авторизации
 Быстрый старт
 Клонируйте репозиторий:
 git clone https://github.com/dnm-emu/ToDoList
-cd todo_app
 
-Создайте и активируйте виртуальное окружение:
-python -m venv venv
-venv\Scripts\activate  # Windows
+cd ToDoList
+cd my-frontend-project
+npm instaLL
+npm run dev
+cd todo_app
+docker-compose up --build
 
 # или
 source venv/bin/activate  # Linux/Mac
