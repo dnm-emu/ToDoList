@@ -16,10 +16,15 @@ JWT-токены для авторизации
 git clone https://github.com/dnm-emu/ToDoList
 
 cd ToDoList
+
 cd my-frontend-project
-npm instaLL
+
+npm install
+
 npm run dev
+
 cd todo_app
+
 docker-compose up --build
 
 Откройте frontend http://localhost:5173
