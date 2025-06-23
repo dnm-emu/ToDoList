@@ -22,6 +22,8 @@ npm run dev
 cd todo_app
 docker-compose up --build
 
+Откройте frontend http://localhost:5173
+
 # или
 source venv/bin/activate  # Linux/Mac
 
