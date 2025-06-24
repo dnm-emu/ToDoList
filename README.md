@@ -41,3 +41,17 @@ uvicorn app.main:app --reload
 Запуск через Docker
 docker build -t todo_back .
 docker run -p 8000:8000 todo_app
+
+
+## Для мобильного приложения
+cd mobile
+
+npm install @capacitor/core @capacitor/cli
+
+npx cap init
+
+npx cap add android
+
+npx cap sync andriod
+
+npx cap open android
