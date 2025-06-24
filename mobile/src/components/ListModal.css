@@ -1,0 +1,31 @@
+
+
+.list-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.list-modal input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}

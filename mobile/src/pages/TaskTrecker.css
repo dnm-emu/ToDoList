@@ -1,0 +1,78 @@
+.list {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.plus-btn{
+  width: 40px;
+  height: 40px;
+  border-style: solid ;
+  border-color: #a4b9e5; 
+  color: #a4b9e5;
+  border-radius: 100%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.plus-btn:hover {
+  background-color: #92a8d8; 
+  color: white;
+}
+.plus-task-btn{
+    width: 40px;
+    height: 40px;
+    border-style: solid ;
+    border-color: #e5c1a4; 
+    color: #e5c1a4;
+    border-radius: 100%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- visual enhancements & logout button --- */
+.Trecer-page{
+    padding: 20px;
+    background: linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.logout-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff6b6b;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+.logout-btn:hover{
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+.tasks{
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.plus-btn, .plus-task-btn{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+.plus-btn:hover, .plus-task-btn:hover{
+    transform: scale(1.1);
+}
