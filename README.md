@@ -55,3 +55,6 @@ npx cap add android
 npx cap sync andriod
 
 npx cap open android
+
+Ссылка на видео youtube (как работает мобилка)
+**https://youtu.be/5ZMpDGFijl4**
