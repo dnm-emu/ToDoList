@@ -11,12 +11,7 @@ from app.models import Category
 
 from app.tasks import router as tasks_router
 app = FastAPI()
-origins = [
-    "http://localhost:5173",  # твой фронт
-    "http://127.0.0.1:5173",  # на всякий случай
-    # можно добавить прод-URL, когда будет деплой
-]
-
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,           # ⬅️ какие домены можно
